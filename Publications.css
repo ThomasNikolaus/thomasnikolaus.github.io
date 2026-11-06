@@ -74,13 +74,18 @@
 
 .selected-intro {
   max-width: 760px;
-  margin: 0 0 24px;
+  margin: 0 0 10px;
   color: var(--muted);
 }
 
-.selected-intro a {
+.publication-jump {
+  display: inline-block;
+  margin-bottom: 24px;
   color: var(--accent);
-  text-underline-offset: 2px;
+  font-size: .88rem;
+  font-weight: 650;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 .selected-papers {
