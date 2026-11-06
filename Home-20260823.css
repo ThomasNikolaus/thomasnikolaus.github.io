@@ -271,26 +271,26 @@ main { overflow: hidden; }
   box-shadow: 0 8px 24px rgba(20, 35, 60, .07);
 }
 .logo-stage {
-  min-height: 118px;
-  padding: 24px;
+  min-height: 96px;
+  padding: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid var(--line);
 }
 .logo-stage.light { background: #fff; }
-.logo-stage.cmm-stage { padding: 14px 22px; }
-.logo-stage img { display: block; width: min(100%, 205px); max-height: 72px; object-fit: contain; }
-.logo-stage img.cmm-logo { width: min(100%, 225px); max-height: 82px; }
+.logo-stage.cmm-stage { padding: 10px 18px; }
+.logo-stage img { display: block; width: min(100%, 195px); max-height: 62px; object-fit: contain; }
+.logo-stage img.cmm-logo { width: min(100%, 210px); max-height: 70px; }
 .logo-stage .uni-logo { width: min(100%, 190px); }
 .ktf-mark { gap: 12px; color: #fff; background: #176e77; }
-.ktf-mark b { font: 500 3.3rem/1 Georgia, serif; }
+.ktf-mark b { font: 500 2.8rem/1 Georgia, serif; }
 .ktf-mark i {
   max-width: 105px;
   font: normal 700 .72rem/1.35 Arial, sans-serif;
   letter-spacing: .12em;
 }
-.card-copy { display: block; padding: 18px 19px 20px; }
+.card-copy { display: block; padding: 15px 17px 17px; }
 .card-copy strong {
   display: block;
   margin-bottom: 6px;
