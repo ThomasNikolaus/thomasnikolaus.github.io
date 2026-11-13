@@ -305,6 +305,39 @@ main { overflow: hidden; }
 .feature h2 { margin: 13px 0 20px; }
 .feature p:not(.eyebrow) { font-size: 1.08rem; color: #334054; max-width: 700px; }
 .button.light { margin-top: 16px; }
+.cartography-project {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 160px;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--line);
+}
+.feature .cartography-project h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  margin: 12px 0 16px;
+}
+.feature .cartography-project p:not(.eyebrow) {
+  max-width: 800px;
+  margin: 0 0 18px;
+  font-size: 1rem;
+}
+.cartography-project .button { margin-top: 0; }
+.cartography-project-map { margin: 0; }
+.cartography-project-map > a { display: block; }
+.cartography-project-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  clip-path: polygon(1.325% 41.406%, 7.152% 25.651%, 18.278% 12.63%, 33.51% 4.167%, 49.272% 1.432%, 50.728% 1.432%, 63.576% 3.646%, 66.49% 4.167%, 67.682% 4.688%, 81.589% 12.63%, 92.715% 25.521%, 98.675% 41.536%, 98.675% 58.464%, 92.848% 74.219%, 81.987% 86.979%, 81.06% 87.63%, 66.755% 95.703%, 63.046% 96.354%, 49.801% 98.568%, 33.907% 95.833%, 32.45% 95.312%, 18.278% 87.24%, 7.152% 74.219%, 1.325% 58.594%);
+}
+.cartography-project-map figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  text-align: center;
+  font-size: .65rem;
+}
 .seminar-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -471,6 +504,8 @@ footer a { color: var(--navy); }
 }
 
 @media (max-width: 560px) {
+  .cartography-project { grid-template-columns: 1fr; gap: 20px; }
+  .cartography-project-map { width: 140px; justify-self: center; }
   .leadership-logos { grid-template-columns: 1fr; }
   .outreach-grid { grid-template-columns: 1fr; }
 }
