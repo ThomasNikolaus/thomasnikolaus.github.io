@@ -8,6 +8,9 @@
   --accent2: #25a8b7;
   --navy: #163467;
   --max: 1120px;
+  --section-heading-size: clamp(1.7rem, 2.6vw, 2.2rem);
+  --entry-heading-size: 1.45rem;
+  --section-text-size: .96rem;
 }
 
 * { box-sizing: border-box; }
@@ -162,15 +165,8 @@ main { overflow: hidden; }
   border-radius: 8px;
 }
 .home > section:not(.hero) {
-  padding: 58px max(20px, calc((100vw - var(--max))/2));
+  padding: 36px max(20px, calc((100vw - var(--max))/2));
   border-top: 1px solid var(--line);
-}
-.home > #leadership,
-.home > #seminars,
-.home > #conferences,
-.home > #outreach {
-  padding-top: 36px;
-  padding-bottom: 36px;
 }
 .positions {
   display: block;
@@ -180,56 +176,51 @@ main { overflow: hidden; }
   background: var(--soft);
 }
 .contributions h2, .positions h2, .feature h2, .conferences h2, .outreach h2 {
-  font: 500 clamp(2rem, 3.6vw, 3.2rem)/1.08 Georgia, 'Times New Roman', serif;
-  letter-spacing: -.025em;
-  margin: 0;
-}
-.positions h2, .conferences h2, .outreach h2 {
-  font-size: clamp(1.7rem, 2.6vw, 2.2rem);
-  line-height: 1.15;
+  font: 500 var(--section-heading-size)/1.15 Georgia, 'Times New Roman', serif;
   letter-spacing: -.02em;
+  margin: 0;
 }
 .contributions h2 { margin-top: 0; }
 .contributions-intro {
-  max-width: 720px;
-  margin: 18px 0 0;
+  max-width: 880px;
+  margin: 12px 0 0;
   color: #465266;
-  font-size: 1.02rem;
-  line-height: 1.6;
+  font-size: var(--section-text-size);
+  line-height: 1.55;
 }
 .contributions-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .contribution-card {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  padding: 28px;
+  padding: 20px;
   background: var(--soft);
   border: 1px solid var(--line);
   border-top: 3px solid var(--navy);
   border-radius: 4px;
 }
 .contribution-card h3 {
-  margin: 0 0 17px;
-  font: 500 1.55rem/1.22 Georgia, 'Times New Roman', serif;
-  letter-spacing: -.015em;
+  margin: 0 0 12px;
+  font: 500 var(--entry-heading-size)/1.2 Georgia, 'Times New Roman', serif;
+  letter-spacing: -.01em;
 }
 .contribution-card p {
   margin: 0;
   color: #3f4a5d;
-  font-size: .94rem;
-  line-height: 1.62;
+  font-size: var(--section-text-size);
+  line-height: 1.55;
 }
 .contribution-links {
   display: grid;
   justify-items: start;
   gap: 6px;
   margin-top: auto;
-  padding-top: 23px;
+  padding-top: 16px;
 }
 .contribution-links a {
   color: var(--navy);
@@ -253,7 +244,7 @@ main { overflow: hidden; }
   max-width: 880px;
   margin: 12px 0 0;
   color: #465266;
-  font-size: .96rem;
+  font-size: var(--section-text-size);
   line-height: 1.55;
 }
 .leadership-logos {
@@ -304,9 +295,9 @@ main { overflow: hidden; }
 .card-copy > span { display: block; font: 1rem/1.35 Georgia, serif; }
 
 .feature { display: block; }
-.feature h2 { font-size: 1.45rem; line-height: 1.2; margin: 6px 0 10px; letter-spacing: -.01em; }
+.feature h2 { font-size: var(--entry-heading-size); line-height: 1.2; margin: 6px 0 10px; letter-spacing: -.01em; }
 .feature .eyebrow { margin: 0; font-size: .68rem; }
-.feature p:not(.eyebrow) { font-size: .96rem; line-height: 1.55; color: #334054; max-width: 800px; margin: 0 0 12px; }
+.feature p:not(.eyebrow) { font-size: var(--section-text-size); line-height: 1.55; color: #334054; max-width: 800px; margin: 0 0 12px; }
 .button.light { margin-top: 16px; }
 .feature .button {
   padding: 0;
@@ -326,10 +317,6 @@ main { overflow: hidden; }
   margin-bottom: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--line);
-}
-.feature .cartography-project h2 {
-  font-size: 1.5rem;
-  margin: 6px 0 10px;
 }
 .feature .cartography-project p:not(.eyebrow) {
   max-width: 850px;
@@ -466,8 +453,8 @@ a.outreach-card:hover strong {
 }
 .outreach-card > span:not(.outreach-date) {
   color: #334054;
-  font-size: .92rem;
-  line-height: 1.5;
+  font-size: var(--section-text-size);
+  line-height: 1.55;
 }
 .outreach-card > span.outreach-people { margin-top: 7px; color: var(--muted); font-size: .82rem; }
 .outreach-card em {
@@ -500,7 +487,6 @@ footer a { color: var(--navy); }
   .hero { grid-template-columns: 1fr; gap: 24px; padding: 48px 0; }
   .portrait-wrap { justify-self: start; width: 240px; transform: none; }
   .positions, .feature, .conferences, .outreach { grid-template-columns: 1fr; }
-  .contributions h2 { font-size: 2.2rem; }
   .contributions-grid { grid-template-columns: 1fr; }
   .seminar-list { grid-template-columns: 1fr; gap: 0; }
   .seminar-feature:first-child { padding-right: 0; }
