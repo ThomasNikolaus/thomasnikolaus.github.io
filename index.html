@@ -58,36 +58,8 @@
   </script>
   <link rel="icon" href="favicon-mm.png?v=20260823-2" type="image/png" sizes="128x128">
   <link rel="shortcut icon" href="favicon-mm.png?v=20260823-2" type="image/png">
-  <link rel="stylesheet" href="Home-20260823.css?v=20261113-cartography-project">
+  <link rel="stylesheet" href="Home-20260823.css?v=20261113-compact-sections">
   <style>@media(max-width:700px){.site-header{flex-wrap:wrap}.site-header nav{width:100%;flex-wrap:wrap;overflow:visible;justify-content:flex-start;gap:8px 15px;padding-bottom:0}}</style>
-  <style>
-    .conferences{display:block;background:var(--soft)}
-    .conferences h2{font:500 clamp(2rem,3.6vw,3.2rem)/1.08 Georgia,'Times New Roman',serif;letter-spacing:-.025em;margin:13px 0 28px}
-    .conference-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
-    .conference-list{padding:22px 24px 8px;background:var(--white);border:1px solid var(--line);border-radius:4px}
-    .conference-list h3{margin:0 0 16px;color:var(--navy);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase}
-    .conference-item{padding:17px 0 18px;border-top:1px solid var(--line)}
-    .conference-item time{display:block;margin-bottom:7px;color:var(--muted);font-size:.67rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
-    .conference-item h4{margin:0;font:500 1.08rem/1.32 Georgia,'Times New Roman',serif}
-    .conference-item h4 a{text-decoration-thickness:1px;text-underline-offset:3px}
-    .conference-item p{margin:7px 0 0;color:var(--muted);font-size:.82rem;line-height:1.45}
-    .conference-item.provisional time{color:#7a5269}
-    .outreach{display:block;background:var(--white)}
-    .outreach h2{font:500 clamp(2rem,3.6vw,3.2rem)/1.08 Georgia,'Times New Roman',serif;letter-spacing:-.025em;margin:0 0 28px}
-    .outreach-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-    .outreach-card{display:flex;flex-direction:column;min-height:230px;padding:24px;background:var(--white);border:1px solid var(--line);border-radius:4px;text-decoration:none;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
-    .outreach-card:hover{transform:translateY(-2px);border-color:#c9d0db;box-shadow:0 8px 24px rgba(20,35,60,.07)}
-    .outreach-date{margin-bottom:14px;color:var(--muted);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-    .outreach-card strong{margin-bottom:12px;font:500 1.25rem/1.3 Georgia,'Times New Roman',serif}
-    .outreach-card>span:not(.outreach-date){color:#334054;font-size:.94rem}
-    .outreach-card .outreach-people{margin-top:10px;color:var(--muted);font-size:.84rem}
-    .outreach-card em{margin-top:auto;padding-top:22px;color:var(--navy);font-size:.84rem;font-style:normal;font-weight:650}
-    .outreach-links{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:auto;padding-top:22px}
-    .outreach-links a{color:var(--navy);font-size:.84rem;font-weight:650;text-decoration-thickness:1px;text-underline-offset:3px}
-    .outreach-card--wide{grid-column:1/-1;min-height:190px}
-    @media(max-width:800px){.conferences,.outreach{grid-template-columns:1fr}.conferences h2,.outreach h2{font-size:2.2rem}.conference-columns{grid-template-columns:1fr}}
-    @media(max-width:560px){.outreach-grid{grid-template-columns:1fr}}
-  </style>
 </head>
 <body>
   <header class="site-header">
@@ -165,23 +137,23 @@
     </section>
     <section id="seminars" class="feature">
       <article class="cartography-project">
-        <div>
-          <p class="eyebrow">Collaborative research project</p>
-          <h2>Homotopical Cartography Project</h2>
-          <p>A collaborative research project at Mathematics Münster using homotopical methods to develop new mathematical insights. Our findings are collected in Exploration Charts, presenting results, examples, counterexamples, and proofs.</p>
-          <a class="button light" href="https://thomasnikolaus.de/Cartography/">Explore the Atlas →</a>
-        </div>
         <figure class="cartography-project-map">
           <a href="https://thomasnikolaus.de/Cartography/" aria-label="Explore the Homotopical Cartography Atlas">
             <img src="https://thomasnikolaus.de/Cartography/assets/maps/urbano-monte-world-polygon-768.webp" alt="" width="755" height="768" loading="lazy" decoding="async">
           </a>
           <figcaption><a href="https://thomasnikolaus.de/Cartography/#map-note-heading">Urbano Monte, 1587</a></figcaption>
         </figure>
+        <div>
+          <p class="eyebrow">Collaborative research project</p>
+          <h2>Homotopical Cartography Project</h2>
+          <p>A collaborative research project at Mathematics Münster using homotopical methods to develop new mathematical insights. Our findings are collected in Exploration Charts, presenting results, examples, counterexamples, and proofs.</p>
+          <a class="button light" href="https://thomasnikolaus.de/Cartography/">Explore the Atlas →</a>
+        </div>
       </article>
       <div class="seminar-list">
         <article class="seminar-feature">
           <p class="eyebrow">Online seminar</p>
-          <h2>AI and the Future<br>of Mathematics</h2>
+          <h2>AI and the Future of Mathematics</h2>
           <p>A forum for discussing how artificial intelligence is changing mathematical research, discovery, and the future of the discipline.</p>
           <a class="button light" href="https://www.uni-muenster.de/MathematicsMuenster/ai-math/">View the seminar</a>
         </article>
@@ -256,7 +228,7 @@
       <div>
         <h2>Mathematics in society</h2>
         <div class="outreach-grid">
-          <a class="outreach-card outreach-card--wide" href="https://ai.math.ms/">
+          <a class="outreach-card" href="https://ai.math.ms/">
             <span class="outreach-date">Research · Education · Discussion</span>
             <strong aria-label="AI.MATH Initiative">AI<span class="ai-math-dot" aria-hidden="true"></span>MATH Initiative</strong>
             <span>An open initiative presenting draft positions, questions, and perspectives on the future of mathematical research and education in the age of AI.</span>

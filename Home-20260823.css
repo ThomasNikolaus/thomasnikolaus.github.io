@@ -165,6 +165,13 @@ main { overflow: hidden; }
   padding: 58px max(20px, calc((100vw - var(--max))/2));
   border-top: 1px solid var(--line);
 }
+.home > #leadership,
+.home > #seminars,
+.home > #conferences,
+.home > #outreach {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
 .positions {
   display: block;
 }
@@ -176,6 +183,11 @@ main { overflow: hidden; }
   font: 500 clamp(2rem, 3.6vw, 3.2rem)/1.08 Georgia, 'Times New Roman', serif;
   letter-spacing: -.025em;
   margin: 0;
+}
+.positions h2, .conferences h2, .outreach h2 {
+  font-size: clamp(1.7rem, 2.6vw, 2.2rem);
+  line-height: 1.15;
+  letter-spacing: -.02em;
 }
 .contributions h2 { margin-top: 0; }
 .contributions-intro {
@@ -238,62 +250,52 @@ main { overflow: hidden; }
 }
 .contribution-link-arrow { color: var(--navy); }
 .leadership-intro p {
-  max-width: 720px;
-  margin: 16px 0 0;
+  max-width: 880px;
+  margin: 12px 0 0;
   color: #465266;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: .96rem;
+  line-height: 1.55;
 }
 .leadership-logos {
-  grid-column: 1/-1;
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 40px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 28px;
+  margin-top: 20px;
 }
 .leadership-card {
-  grid-column: span 2;
   min-width: 0;
-  display: flex;
-  flex-direction: column;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
   text-decoration: none;
-  overflow: hidden;
-  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
 }
-.leadership-card:nth-child(4) { grid-column: 2 / span 2; }
-.leadership-card:nth-child(5) { grid-column: 4 / span 2; }
-.leadership-card:hover {
-  transform: translateY(-2px);
-  border-color: #c9d0db;
-  box-shadow: 0 8px 24px rgba(20, 35, 60, .07);
+.leadership-card:hover .card-copy > span {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 .logo-stage {
-  min-height: 96px;
-  padding: 18px;
+  min-height: 48px;
+  padding: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid var(--line);
 }
-.logo-stage.light { background: #fff; }
-.logo-stage.cmm-stage { padding: 10px 18px; }
-.logo-stage img { display: block; width: min(100%, 195px); max-height: 62px; object-fit: contain; }
-.logo-stage img.cmm-logo { width: min(100%, 210px); max-height: 70px; }
-.logo-stage .uni-logo { width: min(100%, 190px); }
-.ktf-mark { gap: 12px; color: #fff; background: #176e77; }
-.ktf-mark b { font: 500 2.8rem/1 Georgia, serif; }
+.logo-stage.light { background: transparent; }
+.logo-stage img { display: block; width: 100%; max-height: 42px; object-fit: contain; }
+.ktf-mark { gap: 6px; padding: 6px; color: #fff; background: #176e77; border-radius: 3px; }
+.ktf-mark b { font: 500 2rem/1 Georgia, serif; }
 .ktf-mark i {
-  max-width: 105px;
-  font: normal 700 .72rem/1.35 Arial, sans-serif;
-  letter-spacing: .12em;
+  max-width: 44px;
+  font: normal 700 .48rem/1.35 Arial, sans-serif;
+  letter-spacing: .06em;
 }
-.card-copy { display: block; padding: 15px 17px 17px; }
+.card-copy { display: block; padding-left: 16px; }
 .card-copy strong {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   color: var(--muted);
   font-size: .68rem;
   letter-spacing: .12em;
@@ -302,29 +304,40 @@ main { overflow: hidden; }
 .card-copy > span { display: block; font: 1rem/1.35 Georgia, serif; }
 
 .feature { display: block; }
-.feature h2 { margin: 13px 0 20px; }
-.feature p:not(.eyebrow) { font-size: 1.08rem; color: #334054; max-width: 700px; }
+.feature h2 { font-size: 1.45rem; line-height: 1.2; margin: 6px 0 10px; letter-spacing: -.01em; }
+.feature .eyebrow { margin: 0; font-size: .68rem; }
+.feature p:not(.eyebrow) { font-size: .96rem; line-height: 1.55; color: #334054; max-width: 800px; margin: 0 0 12px; }
 .button.light { margin-top: 16px; }
+.feature .button {
+  padding: 0;
+  background: none;
+  color: var(--navy);
+  border-radius: 0;
+  font-size: .87rem;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
 .cartography-project {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 160px;
-  gap: 40px;
+  grid-template-columns: minmax(0, 1fr) 104px;
+  gap: 28px;
   align-items: center;
-  margin-bottom: 36px;
-  padding-bottom: 36px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
   border-bottom: 1px solid var(--line);
 }
 .feature .cartography-project h2 {
-  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-  margin: 12px 0 16px;
+  font-size: 1.5rem;
+  margin: 6px 0 10px;
 }
 .feature .cartography-project p:not(.eyebrow) {
-  max-width: 800px;
-  margin: 0 0 18px;
-  font-size: 1rem;
+  max-width: 850px;
+  margin: 0 0 12px;
 }
 .cartography-project .button { margin-top: 0; }
-.cartography-project-map { margin: 0; }
+.cartography-project > div { grid-column: 1; grid-row: 1; }
+.cartography-project-map { grid-column: 2; grid-row: 1; margin: 0; }
 .cartography-project-map > a { display: block; }
 .cartography-project-map img {
   display: block;
@@ -333,10 +346,10 @@ main { overflow: hidden; }
   clip-path: polygon(1.325% 41.406%, 7.152% 25.651%, 18.278% 12.63%, 33.51% 4.167%, 49.272% 1.432%, 50.728% 1.432%, 63.576% 3.646%, 66.49% 4.167%, 67.682% 4.688%, 81.589% 12.63%, 92.715% 25.521%, 98.675% 41.536%, 98.675% 58.464%, 92.848% 74.219%, 81.987% 86.979%, 81.06% 87.63%, 66.755% 95.703%, 63.046% 96.354%, 49.801% 98.568%, 33.907% 95.833%, 32.45% 95.312%, 18.278% 87.24%, 7.152% 74.219%, 1.325% 58.594%);
 }
 .cartography-project-map figcaption {
-  margin-top: 8px;
+  margin-top: 6px;
   color: var(--muted);
   text-align: center;
-  font-size: .65rem;
+  font-size: .62rem;
 }
 .seminar-list {
   display: grid;
@@ -349,18 +362,18 @@ main { overflow: hidden; }
   min-width: 0;
   flex-direction: column;
 }
-.seminar-feature:first-child { padding-right: 36px; }
+.seminar-feature:first-child { padding-right: 24px; }
 .seminar-feature + .seminar-feature {
-  padding-left: 36px;
+  padding-left: 24px;
   border-left: 1px solid var(--line);
 }
-.seminar-feature .button { align-self: flex-start; margin-top: auto; }
+.seminar-feature .button { align-self: flex-start; margin-top: 0; }
 
 .conferences {
   display: block;
   background: var(--soft);
 }
-.conferences h2 { margin: 13px 0 28px; }
+.conferences h2 { margin: 10px 0 20px; }
 .conference-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -410,30 +423,28 @@ main { overflow: hidden; }
   display: block;
   background: var(--white);
 }
-.outreach h2 { margin: 0 0 28px; }
+.outreach h2 { margin: 0 0 20px; }
 .outreach-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 0 28px;
+  align-items: start;
 }
 .outreach-card {
   display: flex;
   flex-direction: column;
-  min-height: 230px;
-  padding: 24px;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 4px;
+  min-width: 0;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
   text-decoration: none;
-  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
 }
-.outreach-card:hover {
-  transform: translateY(-2px);
-  border-color: #c9d0db;
-  box-shadow: 0 8px 24px rgba(20, 35, 60, .07);
+a.outreach-card:hover strong {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 .outreach-date {
-  margin-bottom: 14px;
+  margin-bottom: 7px;
   color: var(--muted);
   font-size: .68rem;
   font-weight: 700;
@@ -441,8 +452,8 @@ main { overflow: hidden; }
   text-transform: uppercase;
 }
 .outreach-card strong {
-  margin-bottom: 12px;
-  font: 500 1.25rem/1.3 Georgia, 'Times New Roman', serif;
+  margin-bottom: 7px;
+  font: 500 1.1rem/1.3 Georgia, 'Times New Roman', serif;
 }
 .outreach-card strong .ai-math-dot {
   display: inline-block;
@@ -455,16 +466,19 @@ main { overflow: hidden; }
 }
 .outreach-card > span:not(.outreach-date) {
   color: #334054;
-  font-size: .94rem;
+  font-size: .92rem;
+  line-height: 1.5;
 }
+.outreach-card > span.outreach-people { margin-top: 7px; color: var(--muted); font-size: .82rem; }
 .outreach-card em {
-  margin-top: auto;
-  padding-top: 22px;
+  padding-top: 10px;
   color: var(--navy);
   font-size: .84rem;
   font-style: normal;
   font-weight: 650;
 }
+.outreach-links { display: flex; flex-wrap: wrap; gap: 6px 16px; padding-top: 10px; }
+.outreach-links a { color: var(--navy); font-size: .84rem; font-weight: 650; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
 footer {
   display: flex;
@@ -480,32 +494,24 @@ footer {
 }
 footer a { color: var(--navy); }
 
-@media (max-width: 960px) {
-  .leadership-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .leadership-card,
-  .leadership-card:nth-child(4),
-  .leadership-card:nth-child(5) { grid-column: auto; }
-}
-
 @media (max-width: 800px) {
   .site-header { height: auto; min-height: 72px; align-items: flex-start; gap: 15px; padding: 20px 0; }
   .site-header nav { display: flex; gap: 13px; overflow-x: auto; padding-bottom: 5px; font-size: .68rem; }
   .hero { grid-template-columns: 1fr; gap: 24px; padding: 48px 0; }
   .portrait-wrap { justify-self: start; width: 240px; transform: none; }
   .positions, .feature, .conferences, .outreach { grid-template-columns: 1fr; }
-  .contributions h2, .positions h2, .feature h2, .conferences h2, .outreach h2 { font-size: 2.2rem; }
+  .contributions h2 { font-size: 2.2rem; }
   .contributions-grid { grid-template-columns: 1fr; }
-  .seminar-list { grid-template-columns: 1fr; gap: 36px; }
+  .seminar-list { grid-template-columns: 1fr; gap: 0; }
   .seminar-feature:first-child { padding-right: 0; }
-  .seminar-feature + .seminar-feature { padding: 36px 0 0; border-top: 1px solid var(--line); border-left: 0; }
-  .seminar-feature .button { margin-top: 16px; }
+  .seminar-feature + .seminar-feature { margin-top: 18px; padding: 18px 0 0; border-top: 1px solid var(--line); border-left: 0; }
   .conference-columns { grid-template-columns: 1fr; }
   footer { gap: 14px; flex-direction: column; }
 }
 
 @media (max-width: 560px) {
-  .cartography-project { grid-template-columns: 1fr; gap: 20px; }
-  .cartography-project-map { width: 140px; justify-self: center; }
+  .cartography-project { display: flow-root; }
+  .cartography-project-map { float: right; width: 80px; margin: 0 0 8px 14px; }
   .leadership-logos { grid-template-columns: 1fr; }
   .outreach-grid { grid-template-columns: 1fr; }
 }
