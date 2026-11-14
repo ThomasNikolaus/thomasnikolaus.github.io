@@ -134,7 +134,7 @@
   border-left: 3px solid var(--accent);
 }
 
-.current-course p {
+.current-course-type {
   margin: 0 0 9px;
   color: var(--muted);
   font-size: .7rem;
@@ -172,42 +172,14 @@
 }
 
 .upcoming-teaching {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: minmax(250px, .7fr) minmax(0, 1.3fr);
-  gap: 24px 32px;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
-}
-
-.upcoming-heading h2 {
-  font-size: var(--entry-heading-size);
-  line-height: 1.2;
-}
-
-.upcoming-courses {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.upcoming-course {
-  padding: 0;
-}
-
-.upcoming-course p {
-  margin: 0 0 9px;
+  margin: 14px 0 0;
   color: var(--muted);
-  font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
+  font-size: .87rem;
+  line-height: 1.55;
 }
 
-.upcoming-course h3 {
-  margin: 0;
-  color: var(--ink);
-  font: 500 1.1rem/1.3 Georgia, "Times New Roman", serif;
+.upcoming-teaching strong {
+  font-weight: 600;
 }
 
 .teaching-resources {
@@ -376,8 +348,7 @@
 
 @media (max-width: 800px) {
   .teaching-overview,
-  .current-teaching,
-  .upcoming-teaching {
+  .current-teaching {
     grid-template-columns: 1fr;
     gap: 20px;
   }
@@ -392,10 +363,5 @@
 @media (max-width: 560px) {
   .student-projects {
     padding: 18px;
-  }
-
-  .upcoming-courses {
-    grid-template-columns: 1fr;
-    gap: 16px;
   }
 }
